@@ -1,0 +1,47 @@
+% Hausaufgabe 3.1
+\documentclass[a4paper, 12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+% Pakete für mathematischen Formelsatz
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{03 Hausaufgabe}
+\author{Alina Chudnova}
+\date{\today}
+
+\begin{document}
+\maketitle
+%
+% Hausaufgabe 3.2
+% Aufgabe 1
+Es gilt:
+\begin{align*}
+    \lim_{k\to\infty}\left(\sqrt{k+1}-\sqrt{k}\right) 
+    & = \lim_{k\to\infty}\left(\frac{\sqrt{k+1}-\sqrt{k}}{\sqrt{k+1}+\sqrt{k}}\cdot\left(\sqrt{k+1}+\sqrt{k}\right)\right) \\
+    & = \lim_{k\to\infty}\left(\frac{(k+1)-k}{\sqrt{k+1}+\sqrt{k}}\right) \\                                                  
+    & = \lim_{k\to\infty}\left(\frac{1}{\sqrt{k+1}+\sqrt{k}}\right) \\
+    & = 0
+\end{align*}
+% Aufgabe 2
+Wir betrachten die Folge $(x_n,y_n)_{n\in N} := \left(\frac{1}{n^{2}},\frac{1}{n}\right)_{n\in N}$. Sie erfüllt:
+\begin{equation}
+    \lim_{n\to\infty}\left(x_n,y_n\right) = \left(0,0\right)
+\end{equation}
+Weiter gilt:
+\begin{align}
+    g\left(x_n,y_n\right) & = g\left(\frac{1}{n^{2}},\frac{1}{n}\right) \\
+                          & = \frac{\frac{1}{n^{2}}\cdot\left(\frac{1}{n}\right)^{2}}{\left(\frac{1}{n^{2}}\right)^{2}+\left(\frac{1}{n}\right)^{4}} \\
+                          & = \frac{\frac{1}{n^{4}}}{2\cdot\frac{1}{n^{4}}} \\
+                          & = \frac{1}{2} \\
+                          & \neq 0 = g(0,0)
+\end{align}
+% Aufgabe 3
+Mit der Betrachtung des Grenzwertes $l\to\infty$ erhalten wir:
+\begin{equation}
+    \Vert \exp(A)-\exp(B) \Vert_{2} \leq \Vert A-B \Vert_{2}\cdot \exp(\max\left\{\Vert A \Vert_{2},\Vert B \Vert_{2}\right\})\tag{TKS}
+\end{equation}
+\end{document}

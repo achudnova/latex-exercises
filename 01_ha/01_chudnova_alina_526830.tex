@@ -1,0 +1,69 @@
+% Datum: 31.10.2025
+% Name: Alina Chudnova
+% Matrikelnummer: 526830
+% E-Mail: a.chudnova@campus.tu-berlin.de
+
+\documentclass[a4paper]{scrartcl}
+
+% Präambel
+\usepackage[utf8]{inputenc} % Eingabekodierung
+\usepackage[T1]{fontenc}    % Fontkodierung
+\usepackage[ngerman]{babel} % neue deutsche Rechtschreibung
+\usepackage{blindtext}
+
+\title{Hausaufgabe 01}
+\author{Alina Chudnova, Max Mustermann}
+\date{\today}
+
+\begin{document}
+\setlength{\parindent}{0pt} % ohne Einrückung
+\maketitle                  % Titelseite
+\tableofcontents            % Inhaltsverzeichnis
+\newpage
+
+% Beginn der Textumgebung
+\section{Einleitung mit Blindtext}
+\blindtext  % Platzhaltertext
+
+
+\subsection{Texthervorhebungen}
+In diesem Abschnitt werden verschiedene \textbf{Texthervorhebungen} wie \textbf{fett} vorgestellt.
+
+Dieser \emph{Text} ist kursiv.
+
+So sieht die \texttt{Schreibmaschinenschrift} aus.
+
+Hier ist nochmal alles \textsc{großgeschrieben}.
+
+
+\subsubsection{Kombinierte Textauszeichnungen}
+Man kann \textbf{\emph{fett und kursiv}} gleichzeitig verwenden.
+
+Wir können auch \underline{\textsf{unterstreichen und serifenlos gedruckt}} schreiben.
+
+Dieser Text ist \underline{\emph{unterstrichen und in kursiv}}.
+
+Hier sind Textabschnitte, die \textsc{\underline{Kapitälchen und unterstrichen sind.}}
+
+
+\subsection{Schriftgrößen}
+Dieser Text ist {\tiny sehr klein}.
+
+Das ist {\small kleine Schriftgröße}.
+
+Das ist {\large große Schriftgröße}.
+
+{\huge Dieser Abschnitt ist riesig.}
+
+
+\section{Verschiedene Komibinationen - Schriftgröße und Stil}
+{\large\textbf{Dieser Text ist groß und fett.}}
+
+{\small\textsc{Dieser Text ist klein und großgeschrieben gleichzeitig.}}
+
+{\tiny\emph{\underline{Dieser Abschnitt ist winzig, unterstrichen und kursiv.}}}
+
+{\huge\texttt{Riesige Schreibmaschinenschrift!}}
+
+% Ende der Textumgebung
+\end{document}

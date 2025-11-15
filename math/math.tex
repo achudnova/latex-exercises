@@ -1,0 +1,66 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\begin{document}
+\setlength{\parindent}{0pt}
+%
+\section{Mathematischer Formelsatz}
+Seien \begin{math}
+    x\in\mathbb{R}
+\end{math} und $y\in\mathbb{R}$ dann gilt
+%
+\begin{equation}
+    |x+y| \leq |x| + |y|
+    \label{formel1}
+\end{equation}
+Formel (\ref{formel1}) wird Dreiecksungleichung genannt. \\
+%
+Auch mehrzeilige Gleichungen sind möglich:
+%
+\begin{align}
+    (a+b)^2 & = (a+b)(a+b) \\
+            & = a^2+2ab+b^2
+\end{align}
+Es gibt auch abgesetzte Formeln ohne Nummern:
+%
+\begin{equation*}
+    \int_{0}^{\pi/4}\sin(x)\,\mathrm{d}x=1-\frac{1}{\sqrt{2}}
+    \int_{0}^{\pi/4}f(x)\,\mathrm{d}x = 1-\frac{1}{\sqrt{2}}
+\end{equation*}
+Für abgesetzte Formeln ohne Nummern gibt es auch eine Kurzform:
+\[
+    R=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}
+    {\left[\sum_{i=1}^{n}(x_i-\bar{x}^2)\sum_{i=1}^{n}(y_i-\bar{y}^2)\right]^{1/2}}
+\]
+%
+\begin{equation*}
+    A_{m,n} =
+    \begin{pmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9 \\
+    \end{pmatrix}
+\end{equation*}
+
+\newpage
+\section{Tabellen-Übung}
+Hier noch eine Tabelle:
+\begin{center}
+    \begin{tabular}{c c c}
+        A & B & C \\
+        \hline
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        7 & 8 & 9 \\
+    \end{tabular}
+\end{center}
+
+
+\end{document}

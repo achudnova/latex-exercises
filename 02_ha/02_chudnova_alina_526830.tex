@@ -1,0 +1,93 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\title{Hausaufgabe 02}
+\author{Alina Chudnova}
+\date{\today}
+
+\begin{document}
+\maketitle
+%
+% Hausaufgabe 2.2
+\begin{description}
+    \item[Ein Stichpunkt] Inhalt zum ersten Stichpunkt.
+    \item[Zweiter Stichpunkt] Noch mehr Inhalt.  
+\end{description}
+%
+\begin{itemize}
+    \item Text in der ersten Ebene
+    \begin{itemize}
+        \item ein wenig Text in der zweiten Ebene
+        \item Noch ein weiterer Unterpunkt
+    \end{itemize}
+    \item Zweiter Punkt
+\end{itemize}
+%
+\begin{enumerate}
+    \item erstes Item in der ersten Ebene
+    \begin{enumerate}
+        \item Item in der zweiten Ebene
+        \begin{enumerate}
+            \item Item in der dritten Ebene
+            \begin{enumerate}
+                \item Item in der vierten und damit der letzten Ebene
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+% Die maximale Verschachtelungstiefe für eine Listen-Umgebung beträgt 4 Ebenen.
+% Durch das Mischen von itemize und enumerate Umgebungen kann aber eine Tiefe von sechs Ebenen erreicht werden. 
+% Das liegt daran, dass Latex itemize und enumerate-Ebenen getrennt voneinander zählt.
+\begin{itemize}
+    \item Stichpunkt - 1. Ebene
+    \begin{enumerate}
+        \item Nummerierter Stichpunkt - 2. Ebene
+        \begin{itemize}
+            \item Noch ein Stichpunkt - 3. Ebene
+            \begin{enumerate}
+                \item Noch ein Nummerierter Stichpunkt - 4. Ebene
+                \begin{itemize}
+                    \item Stichpunkt - 5. Ebene
+                    \begin{enumerate}
+                        \item Nummerierter Stichpunkt drei in der 6. Ebene
+                    \end{enumerate}
+                \end{itemize}
+            \end{enumerate}
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+%
+% Hausaufgabe 2.3
+\begin{center}
+    \begin{tabular}{l l c r r}
+        \multicolumn{3}{c}{multiple column} & column2 & column3 \\ \hline
+        1 & 1 & 1 & 1 & 1 \\
+        2 & 2 & 2 & 2 & 2 \\
+        3 & 3 & 3 & 3 & 3 \\
+        4 & 4 & 4 & 4 & 4 \\
+    \end{tabular}
+\end{center}
+%
+\begin{center}
+    \begin{tabular}{|*{6}{r|} *{6}{l|}}
+        i1 & i2 & i3 & i4 & i5 & i6 & 
+        i7 & i8 & i9 & i10 & i11 & i12 \\
+        i13 & i14 & i15 & i16 & i17 &
+        i18 & i19 & i20 & i21 & i22 & i23 & i24 \\
+        i25 & i26 & i27 & i28 & i29 & i30 &
+        i31 & i32 & i33 & i34 & i35 & i36 \\
+    \end{tabular}
+\end{center}
+%
+\begin{center}
+    \begin{tabular}{|p{5cm}|c|c|}
+        text1 & text2 & text3 \\ \hline
+        Dieser Text ist sehr lang und wird automatisch auf mehrere Zeilen verteilt. & text2 & text3 \\
+        text4 & text5 & text6 \\
+        text7 & text8 & text9 \\
+    \end{tabular}
+\end{center}
+\end{document}
