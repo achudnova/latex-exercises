@@ -46,4 +46,19 @@
 %
 %
 Seien $\mathbf{a,b \in\mathbb{R}, \textrm{dann gilt } (a+b)^{2}=a^{2}+2ab+b^{2}}$
+%
+\begin{align*}
+    \int_R f(x, y) \, dV &= \int_0^a \left( \int_0^b xe^{xy} \, dy \right) \, dx \\
+                         &= \int_0^a \left( x \cdot \left[ \frac{1}{x} e^{xy} \right]_{y=0}^{y=b} \right) \, dx \\
+                         &= \int_0^a (e^{xb} - 1) \, dx \\
+                         &= \left[ \frac{1}{b} e^{xb} - x \right]_0^a \\
+                         &= \frac{1}{b} (e^{ab} - 1) - a
+\end{align*}
+%
+\begin{gather*}
+    \int_R f(x, y) \, dV = \int_0^a \left( \int_0^b xe^{xy} \, dy \right) \, dx \\
+    = \int_0^a \left( x \cdot \left[ \frac{1}{x} e^{xy} \right]_{y=0}^{y=b} \right) \, dx \\
+    = \int_0^a (e^{xb} - 1) \, dx 
+    % ...usw.
+\end{gather*}
 \end{document}

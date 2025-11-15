@@ -1,5 +1,5 @@
 % Hausaufgabe 3.1
-\documentclass[a4paper, 12pt]{scrartcl}
+\documentclass[a4paper, 11pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -26,6 +26,7 @@ Es gilt:
     & = \lim_{k\to\infty}\left(\frac{1}{\sqrt{k+1}+\sqrt{k}}\right) \\
     & = 0
 \end{align*}
+%
 % Aufgabe 2
 Wir betrachten die Folge $(x_n,y_n)_{n\in N} := \left(\frac{1}{n^{2}},\frac{1}{n}\right)_{n\in N}$. Sie erfüllt:
 \begin{equation}
@@ -39,9 +40,47 @@ Weiter gilt:
                           & = \frac{1}{2} \\
                           & \neq 0 = g(0,0)
 \end{align}
+%
 % Aufgabe 3
 Mit der Betrachtung des Grenzwertes $l\to\infty$ erhalten wir:
 \begin{equation}
     \Vert \exp(A)-\exp(B) \Vert_{2} \leq \Vert A-B \Vert_{2}\cdot \exp(\max\left\{\Vert A \Vert_{2},\Vert B \Vert_{2}\right\})\tag{TKS}
 \end{equation}
+%
+\newpage
+% Hausaufgabe 3.3
+% Aufgabe 1
+Für $a,b > 0$ sei $R := [0,a] \times [0,b]$ und $f(x,y) := xe^{xy}.$ Wir berechnen das Integral:
+\begin{gather*}
+    \int_1 f(x,y) \, dV = \int_{0}^{a} \left(\int_{0}^{b}xe^{xy} \, dy\right) \, dx \\
+                        = \int_{0}^{a} \left(x\cdot\left[\frac{1}{x}e^{xy}\right]_{y=0}^{y=b}\right) \, dx \\
+                        = \int_{0}^{a} \left((e^{xb}-1)\right) \, dx \\
+                        = \left[\frac{1}{b} e^{xb}-x\right]_{0}^{a} \\
+                        = \frac{1}{b} (e^{ab}-1)-a
+\end{gather*}
+%
+% Aufgabe 2
+Wir betrachten die folgende Differentialgleichung:
+\[
+    y' = e^{y} \cdot \sin(x)
+\] 
+Wir können sie mit der Methode der Trennung der Variablen lösen. Zunächst gilt:
+\begin{align*}
+    y' & = e^{y} \sin(x) \\
+    \Leftrightarrow e^{-y}y' & = \sin(x) \\
+    \Leftrightarrow e^{-y} \frac{dy}{dx} & = \sin(x) \\
+    \Leftrightarrow e^{-y} dy & = \sin(x) dx
+\end{align*}
+%
+% Aufgabe 3
+Seien $n,l \in \mathrm{N}$ und $A,B \in \mathrm{R}^{n \times n}$.
+
+Dann gilt:
+\begin{gather*}
+    \sum_{k=0}^{l} \frac{A^{k}}{k!} - \sum_{k=0}^{l} \frac{B^{k}}{k!} = \sum_{k=0}^{l} \frac{1}{k!} \left( A^{k}-B^{k} \right) \\
+    = \sum_{k=1}^{l} \frac{1}{k!} \left( A^{k}-B^{k} \right) \\
+    = \dots \\
+    = (A-B) \sum_{k=0}^{l-1} \frac{1}{(k+1)!} \sum_{j=0}^{k} A^{j} B^{k-j}
+\end{gather*}
+%
 \end{document}
