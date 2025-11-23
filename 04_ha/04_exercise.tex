@@ -17,11 +17,12 @@
 \newcommand{\tb}{\textbackslash}
 \newcommand{\klammer}[1]{\left(#1 \right)}
 \newcommand{\intervall}[2]{\left[#1, #2 \right]}
+\newcommand{\gklammer}[1]{\left\{#1 \right\}}
 
 \begin{document}
-
+%
 \section{Hausaufgabe 4.1}
-
+%
 Zu den wichtigsten Zahlenbereichen in der Mathematik gehören die natürlichen Zahlen $\N$ (z.B. $0,1,2,3\dots$), 
 die ganzen Zahlen $\Z$ (z.B. $\dots,-3,-3,-1,0,\dots$), die reelen Zahlen $\R$ (z.B. $\sqrt{5}$)
 und die komplexen Zahlen $\C$ (z.B. $1+\mathrm{i}$).
@@ -35,5 +36,107 @@ Hier test ich den \texttt{\tb intervall}-Befehl mit zwei Argumenten:
 \[
     x \in \intervall{0}{10}
 \]
+Das bedeutet, $x$ liegt zwischen $0$ und $10$.
+%
+\section{Hausaufgabe 4.2}
+%
+Es gilt:
+\begin{align*}
+    M_2             &= \gklammer{\klammer{x,y}\in\R^{2} \mid x^{2} > y} \\
+    \mathring{M}_2  &= \gklammer{\klammer{x,y}\in\R^{2} \mid x^{2} > y} = M_2 \\
+    \partial M_2    &= \gklammer{\klammer{x,y}\in\R^{2} \mid x^{2} = y} \\
+    \bar{M}_2       &= \gklammer{\klammer{x,y}\in\R^{2} \mid x^{2} \ge y}
+\end{align*}
+%
+Wir betrachten die auf $\R^{2}$ definierte Abbildung
+\[
+    f(x,y) :=
+    \left\{
+    \begin{array}{cl}
+        \frac{x^{9}+3x^{2}y^{7}}{\klammer{x^{2}+y^{2}}^{2}} & \text{ für } \klammer{x,y} \neq \klammer{0,0} \\[0.5cm]
+        0 & \text{ für } \klammer{x,y} = 0
+    \end{array}
+    \right.
+\]
+%
+Mit Hilfe des \texttt{\tb cfrac}-Befehls setzen wir einen schönen Kettenbruch:
+\[
+    \sqrt{2} = 1 + \cfrac{1}{2+ \cfrac{1}{2+ \cfrac{1}{2+ \cfrac{1}{2+ \cfrac{1}{\ddots}}}}}
+\]
+%
+\section{Hausaufgabe 4.3}
+%
+Wir betrachten das folgende lineare Gleichungssystem:
+\[
+    \begin{pmatrix}
+        -1 & 2 & 1 \\
+        3 & -8 & -2 \\
+        1 & 0 & 4 
+    \end{pmatrix}
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3 \\
+    \end{pmatrix}
+    = \begin{pmatrix}
+        -2 \\ 4 \\ -2
+    \end{pmatrix}
+\]
+Wir lösen es mit Hilfe des Gauß-Algorithmus:
+\begin{align*}
+    \begin{matrix}
+        -1 & 2 & 1 \mid 1 \\
+        3 & -8 & -2 \mid -2 \\
+        1 & 0 & 4 \mid 4
+    \end{matrix} \quad
+    &\rightsquigarrow
+    \begin{matrix}
+        -1 & 2 & 1 \mid -2 \\
+        0 & -2 & 1 \mid -2 \\
+        0 & 2 & 5 \mid -4
+    \end{matrix} \\[0.5cm]
+    &\rightsquigarrow
+    \begin{matrix}
+         -1 & 2 & 1 \mid -2 \\
+         0 & -2 & 1 \mid -2 \\
+         0 & 0 & 6 \mid -6
+    \end{matrix}
+\end{align*}
+%
+% In den folgenden Gleichungen sollen B, E, j fett gesetzt werden
+\begin{gather*}
+    \nabla \cdot \mathbf{B} = 0 \\
+    \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_{0}} \\
+    \nabla \times \mathbf{B} = \mu_{0} \mathbf{j} + \mu_{0}\varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t} \\
+    \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \\
+    \frac{\partial^{2} \mathbf{E}}{\partial x_{2}} + \frac{\partial^{2} \mathbf{E}}{\partial y^{2}} + 
+    \frac{\partial^{2} \mathbf{E}}{\partial z^{2}} - \frac{1}{c^{2}} \frac{\partial^{2} \mathbf{E}}{\partial t^{2}} = 0
+\end{gather*}
+%
+Wir machen folgenden Ansatz für eine partikuläre Lösung:
+\[
+    y_p(x) = x(A_0 \cos(x) + B_0 \sin(x))e^{x}
+\]
+%
+Für die erste Ableitung erhalten wir:
+\begin{equation*}
+    \begin{split}
+        y'_p(x) &= (A_0 \cos(x) + B_0 \sin(x))e^{x} \\
+                &+ x(-A_0 \sin(x) + B_0 \cos(x))e^{x} \\
+                &+ x(A_0 \cos(x) + B_0 \sin(x))e^{x} \\
+                &= e^{x}(\cos(x)(A_0 + A_0x + B_0x) + \sin(x)(B_0-A_0x+B_0x))           
+    \end{split}
+\end{equation*}
+%
+Für die zweite Ableitung erhalten wir:
+\begin{equation*}
+    \begin{split}
+        y''_p(x) &= e^{x}(\cos(x)(A_0 + A_0x + B_0x) + \sin(x)(B_0 - A_0x + B_0x)) \\
+                 &-\sin(x)(A_0 + A_0x + B_0x) + \cos(x)(A_0 + B_0) \\
+                 &+\cos(x)(B_0 - A_0x + B_0x) + \sin(x)(-A_0x + B_0) \\
+                 &= e^{x} \cos(x)(A_0 + A_0x + B_0x + A_0 + B_0 + B_0 - A_0 + B_0x) \\
+                 &+ \sin(x)(B_0 - A_0x + B_0x - A_0 - A_0x - B_0x - A_0 + B_0) \\
+                 &= e^{x}(cos(x)(2A_0 + 2B_0 + 2B_0x) \\
+                 &+ \sin(x)(-2A_0 + 2B_0 - 2A_0x))
+    \end{split}
+\end{equation*}
 %
 \end{document}
