@@ -1,0 +1,39 @@
+\documentclass[a4paper, parskip, 11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Neue Befehle für die Zahlenmengen
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% weitere Befehle definieren
+\newcommand{\tb}{\textbackslash}
+\newcommand{\klammer}[1]{\left(#1 \right)}
+\newcommand{\intervall}[2]{\left[#1, #2 \right]}
+
+\begin{document}
+
+\section{Hausaufgabe 4.1}
+
+Zu den wichtigsten Zahlenbereichen in der Mathematik gehören die natürlichen Zahlen $\N$ (z.B. $0,1,2,3\dots$), 
+die ganzen Zahlen $\Z$ (z.B. $\dots,-3,-3,-1,0,\dots$), die reelen Zahlen $\R$ (z.B. $\sqrt{5}$)
+und die komplexen Zahlen $\C$ (z.B. $1+\mathrm{i}$).
+
+Hier teste ich den \texttt{\tb klammer}-Befehl:
+\[
+    x \cdot \klammer{\frac{1}{2} + 2 + \cos(x)}
+\]
+
+Hier test ich den \texttt{\tb intervall}-Befehl mit zwei Argumenten:
+\[
+    x \in \intervall{0}{10}
+\]
+%
+\end{document}

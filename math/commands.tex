@@ -1,0 +1,49 @@
+\documentclass[11pt, a4paper]{scrartcl}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{csquotes}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Newcommand: Definitionen
+% 
+% Abkürzungen für 'lange Zeichenketten'
+\newcommand{\tb}{\textbackslash}
+
+% Kommandos für den Mathematikmodus
+\newcommand{\imag}{\mathrm{i}}
+\newcommand{\euler}{\mathrm{e}}
+\newcommand{\abs}[1]{\left|#1\right|}  % [1] -> 1 Argument; #1 Variablenargument wird hier eingesetzt
+\newcommand{\deriv}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+%
+\begin{document}
+\setlength{\parindent}{0pt}
+%
+\section{\texttt{newcommand}-Befehle}
+%
+Meine Notizen sind unter \texttt{C:\textbackslash Benutzer\textbackslash Alina\textbackslash Documents}.
+
+Meine Notizen sind unter \texttt{C:\tb Benutzer\tb Alina\tb Documents}.
+%
+\[
+    \mathrm{e}^{\mathrm{i}\varphi}=\cos(\varphi)+\mathrm{i}\sin(\varphi)
+    \quad \euler^{\imag\varphi}=\cos(\varphi)+\imag\sin(\varphi)
+\]
+%
+\[
+    \left|a\right| \quad
+    \left|\frac{a}{b}\right| \quad
+    \abs{a} \quad
+    \abs{\frac{a}{b}}
+\]
+%
+\[
+    \frac{\mathrm{d}\sin(x)}{\mathrm{d}x}=\cos(x) \quad
+    \deriv{\sin(x)}{x}=\cos(x) \quad
+    \deriv{}{x}\sin(x)=\cos(x)
+\]
+\end{document}
