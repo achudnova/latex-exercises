@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{scrartcl}
+\documentclass[11pt, a4paper]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
+\usepackage{siunitx} % zum Setzen von Einheiten
+\sisetup{locale = DE}
 
 \begin{document}
 \setlength{\parindent}{0pt}
@@ -61,6 +63,48 @@ Hier noch eine Tabelle:
         7 & 8 & 9 \\
     \end{tabular}
 \end{center}
+%
+%
+\section{Typische Fehler beim Formelsatz}
+\textbf{Falscher Formelsatz:} Mit der Variable x gilt:
+\[
+    sin(x)=0 \quad mit \quad x=n\pi, n\in\mathbb{Z}.
+\]
+\textbf{Korrekter Formelsatz:} Mit der Variable $x$ gilt:
+\[
+    \sin(x)=0 \text{ mit } x= n\pi, n\in\mathbb{Z}.
+\]
+\textbf{Falscher Formelsatz:} 
+\[
+    e^{i\varphi}=\cos(\varphi)+i\sin(\varphi)
+\]
+\textbf{Korrekter Formelsatz:}
+\[
+    \mathrm{e}^{\mathrm{i}\varphi}=\cos(\varphi)+\mathrm{i}\sin(\varphi)
+\]
+\textbf{Falscher Formelsatz:}
+\[
+    \left(\frac{d^{2}}{dr^{2}}+\frac{1}{r}\frac{d}{dr}\right)\psi(r)=h(r)
+\]
+\textbf{Korrekter Formelsatz:}
+\[
+    \left(\frac{\mathrm{d}^{2}}{\mathrm{d}r^{2}}+\frac{1}{r}\frac{\mathrm{d}}{\mathrm{d}r}\right)\psi(r)=h(r)
+\]
+%
+%
+\section{Zahlen und Einheiten im Mathemathikmodus}
+%
+\begin{center}
+    \begin{tabular}{ll}
+        $l=3.0e03 km$ & Zahl aus Programm; Einheit nicht aufrecht \\
+        $l=3.0\cdot 10^{3} km$ & Einheit nicht aufrecht \\
+        $l=3.0\cdot 10^{3} \mathrm{km}$ & korrekt? \\
+        $l=\SI{3.0e03}{\kilo\meter}$ & richtig! \\
+    \end{tabular}
+\end{center}
+Die Frequenz betrug nur $f=1.0 \mathrm{khz}$ anstatt der 
+erwarteten $f=1.0 \mathrm{mhz}$.
 
-
+Die Frequenz betrug nur $f=\SI{1.0}{\kilo\hertz}$ anstatt der
+erwarteten $f=\SI{1,0}{\mega\hertz}$.
 \end{document}
