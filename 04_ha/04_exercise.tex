@@ -24,7 +24,7 @@
 \section{Hausaufgabe 4.1}
 %
 Zu den wichtigsten Zahlenbereichen in der Mathematik gehören die natürlichen Zahlen $\N$ (z.B. $0,1,2,3\dots$), 
-die ganzen Zahlen $\Z$ (z.B. $\dots,-3,-3,-1,0,\dots$), die reelen Zahlen $\R$ (z.B. $\sqrt{5}$)
+die ganzen Zahlen $\Z$ (z.B. $\dots,-3,-2,-1,0,\dots$), die reellen Zahlen $\R$ (z.B. $\sqrt{5}$)
 und die komplexen Zahlen $\C$ (z.B. $1+\mathrm{i}$).
 
 Hier teste ich den \texttt{\tb klammer}-Befehl:
@@ -107,7 +107,7 @@ Wir lösen es mit Hilfe des Gauß-Algorithmus:
     \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_{0}} \\
     \nabla \times \mathbf{B} = \mu_{0} \mathbf{j} + \mu_{0}\varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t} \\
     \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \\
-    \frac{\partial^{2} \mathbf{E}}{\partial x_{2}} + \frac{\partial^{2} \mathbf{E}}{\partial y^{2}} + 
+    \frac{\partial^{2} \mathbf{E}}{\partial x^{2}} + \frac{\partial^{2} \mathbf{E}}{\partial y^{2}} + 
     \frac{\partial^{2} \mathbf{E}}{\partial z^{2}} - \frac{1}{c^{2}} \frac{\partial^{2} \mathbf{E}}{\partial t^{2}} = 0
 \end{gather*}
 %
@@ -134,7 +134,7 @@ Für die zweite Ableitung erhalten wir:
                  &+\cos(x)(B_0 - A_0x + B_0x) + \sin(x)(-A_0x + B_0) \\
                  &= e^{x} \cos(x)(A_0 + A_0x + B_0x + A_0 + B_0 + B_0 - A_0 + B_0x) \\
                  &+ \sin(x)(B_0 - A_0x + B_0x - A_0 - A_0x - B_0x - A_0 + B_0) \\
-                 &= e^{x}(cos(x)(2A_0 + 2B_0 + 2B_0x) \\
+                 &= e^{x}(\cos(x)(2A_0 + 2B_0 + 2B_0x) \\
                  &+ \sin(x)(-2A_0 + 2B_0 - 2A_0x))
     \end{split}
 \end{equation*}
