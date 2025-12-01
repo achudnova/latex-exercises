@@ -15,7 +15,6 @@
 \newtheorem{bem}{Bemerkung}
 \newtheorem{bsp}[bem]{Beispiel}
 
-%
 \begin{document}
 %
 \section{Hausaufgabe 5.1}
@@ -55,27 +54,30 @@ Neue Section, neue Nummer, neue Definition.
 %
 \section{Hausaufgabe 5.2}
 %
-$$\cancel{a} + b = \xcancel{-a} + b$$
+Cancel-Paket:
+\[
+    \cancel{a} + b = \xcancel{-a} + b
+\]
 %
-$$
-\begin{pmatrix*}[c]
-    1 & 2 & 3 \\
-    10 & 20 & 30 \\
-    100 & 200 & 300
-\end{pmatrix*}
-=
-\begin{pmatrix*}[l]
-    1 & 2 & 3 \\
-    10 & 20 & 30 \\
-    100 & 200 & 300   
-\end{pmatrix*}
-=
-\begin{pmatrix*}[r]
-    1 & 2 & 3 \\
-    10 & 20 & 30 \\
-    100 & 200 & 300
-\end{pmatrix*}
-$$
+\[
+    \begin{pmatrix*}[c]
+        1 & 2 & 3 \\
+        10 & 20 & 30 \\
+        100 & 200 & 300
+    \end{pmatrix*}
+    =
+    \begin{pmatrix*}[l]
+        1 & 2 & 3 \\
+        10 & 20 & 30 \\
+        100 & 200 & 300   
+    \end{pmatrix*}
+    =
+    \begin{pmatrix*}[r]
+        1 & 2 & 3 \\
+        10 & 20 & 30 \\
+        100 & 200 & 300
+    \end{pmatrix*}
+\]
 %
 Seien $n \geq 2, \alpha_{1} \dots , \alpha_n \in \mathbb{R}$ und
 \[
@@ -97,5 +99,41 @@ Zeige folgende Formel:
 %
 \section{Hausaufgabe 5.3}
 %
-
+\section{Einführung}
+\label{sec:einfuehrung}
+%
+In diesem Abschnitt üben wir, Referenzen/Verweise richtig zu setzen.
+Im Abschnitt~\ref{sec:formeln} werden wir uns ein paar grundlegende mathematische Formeln~\eqref{eq:pqformel} und~\eqref{eq:pythagoras} anschauen.
+Insbesondere schauen wir uns eine wichtige Formel~\eqref{eq:dimensionsformel} im Abschnitt~\ref{subsec:linalgebra} an.
+Dieser Abschnitt befindet sich auf Seite~\pageref{subsec:linalgebra}.
+%
+\section{Mathematische Formeln}
+\label{sec:formeln}
+%
+\begin{equation}
+    \label{eq:pythagoras}
+    a^{2} + b^{2} = c^{2}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:pqformel}
+    x_{1,2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^{2}-q}
+\end{equation}
+%
+%
+\newpage
+\subsection{Lineare Algebra}
+\label{subsec:linalgebra}
+%
+Dimensionsformel:
+\begin{equation}
+    \label{eq:dimensionsformel}
+    \dim(V) = \dim(\mathrm{Bild}_{f}) + \dim(\mathrm{Kern}_{f})
+\end{equation}
+%
+\begin{equation}
+    \label{eq:eigenwert}
+    A \cdot v = \lambda \cdot v
+\end{equation}
+%
 \end{document}
