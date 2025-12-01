@@ -1,0 +1,49 @@
+\documentclass[a4paper, parindent, 11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{blindtext}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\sectionref}[1]{Abschnitt~\ref{#1}}
+
+\begin{document}
+%
+\tableofcontents
+%
+\section{Vorwort}
+\label{sec:vorwort}
+Hier ist ein Vorwort.
+%
+%
+\section{Sinnloser Abschnitt}
+\label{sec:dummy}
+Zusammenhänge zwischen Masse, Energe und Beschleunigung werden anhand Gl.~(\ref{eq:einstein})
+Gl.~(\ref{eq:newton}) in Abschnitt~\ref{sec:mathe} diskutiert. Hier ein wenig \emph{dummy} Text:
+
+\blindtext
+%
+\section{Sinnvolle Mathematik}
+\label{sec:mathe} % Label-Befehl
+%
+Nach etwas sinnlosem Text in Abschnitt \sectionref{sec:dummy} und \sectionref{sec:vorwort} hier nun etwas Sinnvolles.
+%
+\begin{equation}
+    \label{eq:einstein}
+    E=mc^{2}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:newton}
+    \vec{F}=m\vec{a}.   
+\end{equation}
+%
+\subsection{Dummy}
+\label{subsec:nochmal_dummy}
+\blindtext
+
+\end{document}
