@@ -1,0 +1,99 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsthm} % für Theorem-Umgebungen
+\usepackage{mathtools}
+\usepackage{cancel}
+
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+
+%\newtheorem{Name}{Ausgabe}
+\newtheorem{theo}{Theorem}
+\newtheorem{deff}[theo]{Definition}
+%
+\begin{document}
+%
+\section{Hausaufgabe 5.1}
+%
+% amsthm
+\begin{proof}
+    Klar. Folgt aus Definition
+\end{proof}
+
+\begin{theo} Was auch immer \end{theo}
+
+\begin{deff}
+    Hallo
+\end{deff}
+%
+% mathtools
+$\underbracket{a+\dots+a}_{\text{n-mal}} = na$
+
+$\underbracket[0.5pt][5pt]{a+\dots+a}_{\text{n-mal}} = na$
+
+% === MATRIZEN ===
+$$\begin{matrix*}[r] % r = rechts, c = zentriert, l = links
+    -a_{1} & a_{2} \\
+    b_{1} & -b_{2}
+\end{matrix*}$$
+
+\[
+\begin{pmatrix*}[r]
+    1 & 2 \\
+    -2 & 1
+\end{pmatrix*}
+\]
+
+$$\begin{bmatrix*}[r]
+    1 & 2 \\
+    3 & 4
+\end{bmatrix*}$$
+
+$$\begin{Bmatrix*}[r]
+    1 & 2 \\
+    4 & 5
+\end{Bmatrix*}$$
+
+$$\begin{vmatrix*}[r] % Vmatrix*
+    1 & 2 \\
+    4 & 5
+\end{vmatrix*}$$
+
+% === Fallunterscheidung - CASES ===
+$$f(x) = \begin{cases*}
+    5 & 1. Fall \\
+    23 & 2. Fall
+\end{cases*}$$
+
+$$f(x) = \begin{dcases}
+    5 & x \geq 0 \\
+    \int x^{2} \ dx & \text{sonst}
+\end{dcases}$$
+
+$$f(x) = \begin{dcases*}
+    5 & 1. Fall \\
+    \int x^{2} \ dx & 2. Fall
+\end{dcases*}$$
+
+\begin{align*}
+    a - b &\geq 0 \\
+    \shortintertext{andernfalls gilt}
+    a - b & < 0
+\end{align*}
+
+\[\begin{gathered}
+    [p] = 200 \\
+    [v] = 200
+\end{gathered}\]
+
+\[
+    \cramped{y^{y}}
+\]
+
+$\cancel{Wert}, \bcancel{Wert}, \xcancel{Wert}$
+
+\end{document}
