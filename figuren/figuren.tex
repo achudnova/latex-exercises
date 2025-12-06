@@ -1,0 +1,35 @@
+% nur für folgende Formate: .png, .jpg, .pdf
+
+\documentclass[a4paper, 11pt]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{blindtext}
+\usepackage{graphicx} % Zum Einbinden von Figuren nötig
+\graphicspath{{img/}} % im welchem Verzeichnis befinden sich die Bilddateien -> Unterordner 'figuren'
+
+\begin{document}
+%
+\blindtext
+%
+\begin{figure}[ht] % ht => binde ein: 'here', wenn nicht, setze 'top'
+    \centering
+    \includegraphics[width=0.9\textwidth]{image.png}
+    \caption{Terminal window}
+    \label{fig:terminal_window}
+\end{figure}
+%
+\newpage
+\blindtext
+%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth]{kreis.png}
+    \includegraphics[width=0.4\textwidth]{quadrat.png}
+    \caption{Kreis (links) und Quadrat (rechts) mit korrekter Skalierung}
+    \label{fig:kreis_quadrat}
+\end{figure}
+%
+\end{document}
