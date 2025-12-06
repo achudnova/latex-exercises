@@ -1,0 +1,63 @@
+\documentclass[a4paper, parskip, 11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{blindtext}
+
+\begin{document}
+%
+\blindtext, in folgender Tabelle: 
+%
+\begin{center}
+    \begin{tabular}{l||l|l|l|l|l}
+    Name   & Bart & Gürtel & Kapuze & Instrument & Sonstiges \\
+    \hline
+    Dwalin & blau & gold & dunkelgrün & Bratsche & \\
+    Balin & weiß & & purpurrot & Bratsche & \\
+    Kili & gelb & silber & blau & Fiedel & Werkzeug \\
+    Fili & gelb & silber & blau & Fiedel & Spaten \\
+    Dori & & gold & purpurrot & Flöte & \\
+    Nori & & gold & purpurrot & Flöte & \\
+    Ori & & gold & grau & Flöte & \\
+    Oin & & silber & braun & & \\
+    Gloin & & silber & blaßgrünsilber & & \\
+    Bifur & & & gelb & Klarinette & \\
+    Bofur & & & gelb & Klarinette & \\
+    Bombur & & & blaßgrün & Trommel & fett \\
+    Thorin & & & himmelblau mit & Harfe & sehr berühmt \\
+            & & & silberner Schärpe & &
+    \end{tabular}
+\end{center}
+%
+\blindtext Besser: siehe Tabelle \ref{tab:zwerge}.
+%
+% Tabelle als Fließobjekt
+\begin{table}
+    \centering
+    %\captionabove{Die dreizehn Zwerge}
+    %\label{tab:zwerge}
+    \begin{tabular}{l||l|l|l|l|l}
+    Name   & Bart & Gürtel & Kapuze & Instrument & Sonstiges \\
+    \hline
+    Dwalin & blau & gold & dunkelgrün & Bratsche & \\
+    Balin & weiß & & purpurrot & Bratsche & \\
+    Kili & gelb & silber & blau & Fiedel & Werkzeug \\
+    Fili & gelb & silber & blau & Fiedel & Spaten \\
+    Dori & & gold & purpurrot & Flöte & \\
+    Nori & & gold & purpurrot & Flöte & \\
+    Ori & & gold & grau & Flöte & \\
+    Oin & & silber & braun & & \\
+    Gloin & & silber & blaßgrünsilber & & \\
+    Bifur & & & gelb & Klarinette & \\
+    Bofur & & & gelb & Klarinette & \\
+    Bombur & & & blaßgrün & Trommel & fett \\
+    Thorin & & & himmelblau mit & Harfe & sehr berühmt \\
+            & & & silberner Schärpe & &
+    \end{tabular}
+    \caption{Die dreizehn Zwerge}
+    \label{tab:zwerge}
+\end{table}
+%
+\end{document}
