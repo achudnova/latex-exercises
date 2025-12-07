@@ -10,6 +10,9 @@
 \usepackage{graphicx} % Zum Einbinden von Figuren nötig
 \graphicspath{{img/}} % im welchem Verzeichnis befinden sich die Bilddateien -> Unterordner 'figuren'
 
+\usepackage{color}
+\usepackage{transparent}
+
 \begin{document}
 %
 \blindtext
@@ -31,5 +34,15 @@
     \caption{Kreis (links) und Quadrat (rechts) mit korrekter Skalierung}
     \label{fig:kreis_quadrat}
 \end{figure}
+%
+\begin{figure}
+    \centering
+    \def\svgwidth{200pt}
+    \input{grafik.pdf_tex}
+    \vspace{-6cm}
+    \caption{Die schönste Grafik}
+    \label{fig:vektorgrafik}
+\end{figure}
+%
 %
 \end{document}
