@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
+\usepackage{graphicx}
+
 \begin{document}
 %
 \begin{table}
@@ -17,6 +19,24 @@
         Erika Mustermann & Grundschullehrerin & 40 
     \end{tabular}
 \end{table}
-
 %
+Hier ist etwas Text, in dem ich auf die Abbildungen verweise. Wie in Abbildung \ref{fig:don_knuth} zu sehen ist,
+steht dieses Bild alleine. Hingegen besteht die Abbildung \ref{fig:two_pictures} aus zwei Figuren und diese stehen nebeneinander.
+%
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bild1.jpg}
+    \caption{Erstes Bild}
+    \label{fig:don_knuth}
+\end{figure}
+%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{bild2.jpg}
+    \hfill
+    \includegraphics[width=0.45\textwidth]{bild3.png}
+    \caption{Zwei Bilder nebeneinander}
+    \label{fig:two_pictures}
+\end{figure}
+
 \end{document}
