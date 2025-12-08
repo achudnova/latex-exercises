@@ -12,6 +12,9 @@
 %
 \section{Hausaufgabe 6.1}
 %
+Hier steht ein einleitender Text für die erste Aufgabe. Wir betrachten eine kleine Datensammlung.
+Wie man in Tabelle \ref{tab:daten} sehr gut erkennen kann, ist Max deutlich jünger als Erika.
+%
 \begin{table}[h]
     \centering
     \captionabove{Kleine Datenbank}
@@ -28,10 +31,11 @@
 %
 Hier ist etwas Text, in dem ich auf die Abbildungen verweise. Wie in Abbildung \ref{fig:don_knuth} zu sehen ist,
 steht dieses Bild alleine. Hingegen besteht die Abbildung \ref{fig:two_pictures} aus zwei Figuren und diese stehen nebeneinander.
+Die Gesamtbreite der nebeneinanderstehenden Bilder füllt 90\% der Textbreite aus.
 %
 \begin{figure}[htb]
     \centering
-    \includegraphics[width=0.7\textwidth]{bild1.jpg}
+    \includegraphics[width=0.6\textwidth]{bild1.jpg}
     \caption{Erstes Bild}
     \label{fig:don_knuth}
 \end{figure}
@@ -48,6 +52,9 @@ steht dieses Bild alleine. Hingegen besteht die Abbildung \ref{fig:two_pictures}
 \clearpage
 \section{Hausaufgabe 6.3}
 %
+In diesem Abschnitt nutzen wir TikZ und Gnuplot. Die Abbildung \ref{fig:gnuplot} zeigt 
+mathematische Funktionen, die direkt durhc Gnuplot berechnet wurden.
+%
 \begin{figure}[ht]
     \centering
     \begin{tikzpicture}[domain=0:4]
@@ -62,7 +69,11 @@ steht dieses Bild alleine. Hingegen besteht die Abbildung \ref{fig:two_pictures}
             node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
     \end{tikzpicture}
     \caption{GNUPLOT basics}
+    \label{fig:gnuplot}
 \end{figure}
+%
+Des Weiteren sehen wir in Abbildung \ref{fig:tikzbeispiel} ein komplexes Diagramm, das rein mit
+TikZ erstellt wurde.
 %
 % Beispiel von der Seite: https://texample.net/tikz/examples/
 % Author: Rasmus Pank Roulund
@@ -107,7 +118,11 @@ steht dieses Bild alleine. Hingegen besteht die Abbildung \ref{fig:two_pictures}
         \draw[pile] (out) -- (E);
     \end{tikzpicture}
     \caption{Beispiel von der Seite \color{blue}https://texample.net/tikz/examples/}
+    \label{fig:tikzbeispiel}
 \end{figure}
+%
+Die letzte Abbildung \ref{fig:betragsfunktion} zeigt eine mit Inkscape erstellte Grafik.
+Diese Grafik zeigt die Betragsfunktion $y=|x|$.
 %
 \begin{figure}[ht]
     \centering
