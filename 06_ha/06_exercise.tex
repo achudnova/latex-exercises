@@ -4,8 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
-\usepackage{graphicx} % Zum Einbinden von Figuren/Abbildungen nötig
-\usepackage{tikz}
+\usepackage{graphicx}   % Zum Einbinden von Figuren/Abbildungen nötig
+\usepackage{tikz}       % Für TikZ-Grafiken
 \usetikzlibrary{arrows}
 
 \begin{document}
@@ -63,7 +63,7 @@ Diese Grafik zeigt die Betragsfunktion $y=|x|$.
 %
 \begin{figure}[ht]
     \centering
-    \resizebox{0.9\textwidth}{!}{
+    \resizebox{0.9\textwidth}{!}{   % Größe mit resizebox auf 90% der Textbreite anpassen, ! bedeutet Höhe proportional
         \begin{tikzpicture}[domain=0:4]
             \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
             \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
@@ -85,7 +85,7 @@ Diese Grafik zeigt die Betragsfunktion $y=|x|$.
 % Author: Rasmus Pank Roulund
 \begin{figure}[ht]
     \centering
-    \resizebox{0.9\textwidth}{!}{
+    \resizebox{0.9\textwidth}{!}{   % Größe auf 90% der Textbreite anpassen
         \begin{tikzpicture}
             [
             scale=5,
@@ -130,9 +130,10 @@ Diese Grafik zeigt die Betragsfunktion $y=|x|$.
     \label{fig:tikzbeispiel}
 \end{figure}
 %
+% Meine Vektorgrafik, erstellt mit Hilfe von Inkscape
 \begin{figure}[ht]
     \centering
-    \def\svgwidth{0.9\textwidth}
+    \def\svgwidth{0.9\textwidth}       % Größe auf 90% der Textbreite anpassen
     \input{bild4.pdf_tex}
     \caption{Betragsfunktion}
     \label{fig:betragsfunktion}
