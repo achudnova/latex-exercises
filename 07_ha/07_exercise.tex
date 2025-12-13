@@ -5,20 +5,42 @@
 \usepackage[ngerman]{babel}
 \usepackage{csquotes}
 %\usepackage[babel, german=quotes]{csquotes}
-
+\usepackage{array}
 \usepackage[
     backend=biber,
     style=alphabetic]{biblatex}
 \addbibresource{literatur.bib}
 
-\begin{document}
+\usepackage{graphicx}
 
-Das ist ein Beispieltext mit einer Zitation \cite{testkey}.
+\begin{document}
+%
+\section{Hausaufgabe 7.1}
+%
+\begin{table}[htbp]
+    \resizebox{\textwidth}{!}{ % Breite fest, Höhe automatisch
+    \begin{tabular}{c p{5cm} p{3.5cm} p{3cm} c}
+        \hline
+        \textbf{Software-Name}  & \textbf{Charakteristika}     & \textbf{Betriebssystem}    & \textbf{Kosten}      & \textbf{Präferenz} \\
+        \hline
+        Zotero                  & Lokal und webbasiert, schneller Import von Literaturdaten, Notizen anlegen, Zusammenarbeit mit LaTeX-Editoren 
+                                & Windows, Mac, Linux, Web-Version    & Lokal: konstenlos, Web: bis 300 MB kostenlos  & 1 \\
+        \hline
+        Citavi                  & Lokal und webbasiert, einfache Handhabung, komplexe Möglichkeiten, Zusammenarbeit mit LaTeX-Editoren 
+                                & nur Windows, Web-Version & kostenfrei für TU-Angehörige & 3 \\
+        \hline    
+        JabRef                  & Lokal und webbasiert, Zusammenarbeit mit LaTeX-Editoren, Prioritätsangaben möglich, nur über gemeinsame SQL-DB
+                                & Windows, Mac, Linux, Web-Version & konstenfrei & 2 \\
+        \hline
+    \end{tabular}}
+\end{table}
+%
+% Das ist ein Beispieltext mit einer Zitation \cite{testkey}.
 
 % \cite[Präfix][Suffix]{Kürzel}
 % \parencite[Präfix][Suffix]{Kürzel}
 % \footcite[Präfix][Suffix]{Kürzel}
 % \textcite[Präfix][Suffix]{Kürzel}
 % \printbibliography
-
+%
 \end{document}
