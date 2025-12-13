@@ -1,12 +1,24 @@
 \documentclass[a4paper, 11pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontnec}
-\usepackage[babel]{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+%\usepackage[babel, german=quotes]{csquotes}
+
+\usepackage[
+    backend=biber,
+    style=alphabetic]{biblatex}
+\addbibresource{literatur.bib}
 
 \begin{document}
 
+Das ist ein Beispieltext mit einer Zitation \cite{testkey}.
 
-
+% \cite[Präfix][Suffix]{Kürzel}
+% \parencite[Präfix][Suffix]{Kürzel}
+% \footcite[Präfix][Suffix]{Kürzel}
+% \textcite[Präfix][Suffix]{Kürzel}
+% \printbibliography
 
 \end{document}

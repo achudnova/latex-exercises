@@ -11,3 +11,7 @@ figuren/figuren.pdf
 *.sin.*
 *.x.*
 literaturverwaltung/
+*.bbl*
+*.bcf*
+*.blg*
+*.run.xml*
