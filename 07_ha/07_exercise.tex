@@ -1,18 +1,17 @@
-\documentclass[a4paper, 11pt, bibtotoc]{scrartcl}
+\documentclass[a4paper, 11pt]{scrartcl}
 % Literaturverzeichnis im Inhaltsverzeichnis: bibtotoc
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{csquotes}
-%\usepackage[babel, german=quotes]{csquotes}
-\usepackage{array}
+
 \usepackage[
     backend=biber,              % behandelt utf8-encoding korrekt
-    style=alphabetic]{biblatex} % Zitierstil (numeric)
+    style=numeric]{biblatex}    % Zitierstil
 \addbibresource{literatur.bib}  % im selben Verzeichnis - Literaturdatenbank
 
-\usepackage{graphicx}
+\usepackage{graphicx}   % Tabelle auf Textbreite skalieren (resizebox)
 
 \begin{document}
 %
@@ -47,32 +46,30 @@
         \hline
     \end{tabular}}
 \end{table}
+%
 % Hausaufgabe 7.2
-% Wählt eine Literaturverwaltungs-Software aus und erstellt damit eine Literatur- ¨
-% Sammlung, die mindestens 10 Bucher, 10 wissenschaftliche Aufs ¨ atze (Artikel) ¨
-% und 10 Quellen anderer Art (darunter mindestens 5 Webseiten) enthalt. ¨
-% • Erstellt mit der gewahlten Literaturverwaltungs-Software ein ¨ .bib-File. Das
-% File muss im gleichen Ordner gespeichert werden wie das .tex-File, damit ich
-% es kompilieren kann!
-
-% Hausaufgabe 7.3
-% • Schreibt etwas Text und zitiert dabei mindestens 15 Quellen aus eurer LiteraturSammlung, auf keine Fall aber alle.
-% • Unter den Quellen sollen sich Bucher, Artikel und Webseiten befinden. ¨
-% • Erstellt am Ende des Dokumentes das zugehorige Literaturverzeichnis. Der ¨
-% verwendete Zitierstil ist freigestellt.
+%
 \section{Hausaufgabe 7.3}
 %
-Text hier \cite{testkey}
+Die Meteorologie hat sich im Laufe des 20. Jahrhunderts zu einer hochtechnologischen Wissenschaft gewandelt, die auf Computerberechnungen angewiesen ist \cite{nebeker_calculating, balzer_wettervorhersage}. 
+
+Während grundlegende Begriffe in klassischen Nachschlagewerken definiert sind \cite{schirmer_meyers, noauthor_meteorologie}, 
+steht die Forschung heute vor einem erneuten Paradigmenwechsel durch den Einsatz Künstlicher Intelligenz \cite{speiser_artificial}.
+
+Aktuelle Übersichtsstudien zeigen, dass ML-Methoden in der modernen Klimavorhersage zunehmend an Bedeutung gewinnen \cite{zhang_machine, chen_machine}. 
+ML-Algorithmen werden als zentrale Modellkomponenten eingesetzt \cite{de_burgh-day_machine}. 
+Auch Methoden des Supervised Structure Learning finden Anwendung \cite{friston_supervised}.
+
+Die Einsatzgebiete sind dabei vielfältig. Sie reichen von der Analyse verschiedener Wetterereignisse wie Stürmen \cite{mcgovern_review} über spezifische Simulationen \cite{fu_simulation} bis hin zu Analysen von Mars-Wetterdaten \cite{pant_machine_2023}. 
+In der Materialforschung, zur Vorhersage von Strahlungskühlungseffekten, kommen diese Verfahren zum Einsatz \cite{shi_machine}.
+
+Trotz der Erfolge, die auch von Tech-Giganten wie Google vorangetrieben werden \cite{noauthor_weathernext}, bleibt die Nachvollziehbarkeit der Ergebnisse eine Herausforderung.
+Die Forschung konzentriert sich daher verstärkt auf interpretierbare KI-Modelle, um die "Black Box"-Problematik zu lösen \cite{yang_interpretable}. 
+Die Black Box Problematik wird auch in aktuellen Fachartikeln und Lexika diskutiert \cite{eichmann_wetterlexikon, noauthor_ki_klima}.
+
+\footnotesize \textit{Anmerkung: Dieser Text wurde mithilfe von Künstlicher Intelligenz (Gemini) sprachlich korrigiert und überarbeitet.}
 %
 \section{Literaturverzeichnis}
-%
 \printbibliography
-% Das ist ein Beispieltext mit einer Zitation \cite{testkey}.
-
-% \cite[Präfix][Suffix]{Kürzel}
-% \parencite[Präfix][Suffix]{Kürzel}
-% \footcite[Präfix][Suffix]{Kürzel}
-% \textcite[Präfix][Suffix]{Kürzel}
-% \printbibliography
 %
 \end{document}
