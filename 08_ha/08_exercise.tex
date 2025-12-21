@@ -1,14 +1,25 @@
-\documentclass[a4paper, 11pt]{scrartcl}
+\documentclass[12pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
+\usepackage{blindtext}
 \usepackage{layout}
+\usepackage[a4paper, left=2cm, right=3.5cm, top=3cm]{geometry}
 
 \begin{document}
-
-\layout
-
-
+%
+\section{Hausaufgabe 8.1}
+\layout % Seitenlayout anzeigen
+%
+\newpage
+\blindtext[5]
+%
+\newgeometry{left=5cm, right=1cm, top=1cm, bottom=4cm, footnotesep=1.5cm} % Abstand Text - Fußnoten
+Hier ist ein Satz mit einer Fußnote\footnote{Dies ist die erste Fußnote.}.
+\blindtext[5]
+%
+\restoregeometry
+\blindtext[3]
 \end{document}
