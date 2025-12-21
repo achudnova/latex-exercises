@@ -1,0 +1,48 @@
+\documentclass[11pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+
+% Optional: Layout-Paket zum Anzeigen der Seitenmaße
+% \usepackage{layout}
+
+% \usepackage{needspace}
+% \usepackage{fancyhdr}
+
+%\usepackage[a4paper, left=3cm, top=2cm]{geometry}
+% Standard für das komplette Dokument festlegen
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage{pdfpages} % Einbinden von PDF Dateien
+
+\begin{document}
+
+% ===== Titelseite =====
+\begin{titlepage}
+    {\Huge\bfseries Mein Dokumenttitel\par}
+
+    {\large Technische Universität Berlin\par}
+\end{titlepage}
+
+% Seitenlayout ausgeben
+% \layout
+
+% ===== Abschnitt mit geändertem Layout =====
+\newgeometry{left=3cm, right=4cm, top=1cm, bottom=2.5cm}
+\newpage
+\blindtext
+
+% ===== Zurück zum Standard-Layout =====
+\restoregeometry
+\blindtext
+
+% alle Seiten: \includepdf[pages=-]{filename}
+% von x bis y: \includepdf[pages={x-y}]{filename}
+% querkant: \includepdf[landscape=true, pages=-]{filename}
+% 2 auf 1: \includepdf[pages={x-y}, nup=2x1]{filename}
+% Rahmen: frame=true
+% 
+
+\end{document}
