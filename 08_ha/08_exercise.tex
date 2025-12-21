@@ -19,8 +19,30 @@
 % Fußzeile
 \rfoot{\scshape TU Berlin}
 \cfoot{\thepage}
-
+%
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle = {LaTeX Hausaufgabe},
+    pdfauthor = {Alina Chudnova},
+    pdfkeywords = {latex, hyperref, referenzen},
+    pdfdisplaydoctitle = true,
+    colorlinks = true,
+    urlcolor = blue, 
+    filecolor = red,
+    linkcolor = cyan
+}
+%
 \begin{document}
+%
+\tableofcontents
+%
+\section{Einleitung}
+\label{sec:einleitung}
+Dies ist die Einleitung.
+In Abschnitt \ref{sec:grundlagen} werden die Grundlagen erklärt.
+Eine externe Quelle findet sich bei Wikipedia\footnote{\href{https://de.wikipedia.org/wiki/LaTeXRL}{LaTeX Wikipedia}}.
+%
+\newpage
 %
 \section{Hausaufgabe 8.1}
 \layout % Seitenlayout anzeigen
@@ -29,18 +51,23 @@
 \blindtext[5]
 %
 \newgeometry{left=5cm, right=1cm, top=2cm, bottom=4cm, footnotesep=1.5cm} % Abstand Text - Fußnoten
-Hier ist ein Satz mit einer Fußnote\footnote{Dies ist die erste Fußnote.}.
+Hier ist ein Satz mit einer Fußnote\footnote{Dies ist die erste Fußnote: \href{https://www.overleaf.com/}{Overleaf-Website}}.
 \blindtext[5]
 %
 \restoregeometry
 \blindtext[3]
 %
 \section{Hausaufgabe 8.2}
+\label{sec:aufgabe82}
 %
 \includepdf[landscape=true, nup=2x1, pages={2, 1}]{latex_ueb_08.pdf}
 %
 \section{Hausuafgabe 8.3}
+\label{sec:grundlagen}
 %
-
+Hier werden Grundlagen behandelt. Ein weiterer Verweis führt zu Abschnitt \ref{sec:einleitung}.
+Wie bereits in Abschnitt \ref{sec:aufgabe82} gezeigt, lassen sich PDFs direkt einbinden.
+Siehe die eingebundene Datei \href{run:latex_ueb_08.pdf}{(PDF-Datei)}.
+Siehe offizielle TU Website: \href{https://www.tu-berlin.de}{TU Berlin}
 %
 \end{document}
