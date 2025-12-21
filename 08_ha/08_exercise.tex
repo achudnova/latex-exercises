@@ -1,4 +1,4 @@
-\documentclass[12pt]{scrartcl}
+\documentclass{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,18 @@
 \usepackage{blindtext}
 \usepackage{layout}
 \usepackage[a4paper, left=2cm, right=3.5cm, top=3cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%
+% Kopfzeile
+\lhead{\slshape LaTeX}
+\chead{Alina Chudnova}
+\rhead{\slshape Hausaufgabe 8}
+%
+% Fußzeile
+\rfoot{\scshape TU Berlin}
+\cfoot{\thepage}
 
 \begin{document}
 %
@@ -16,10 +28,15 @@
 \newpage
 \blindtext[5]
 %
-\newgeometry{left=5cm, right=1cm, top=1cm, bottom=4cm, footnotesep=1.5cm} % Abstand Text - Fußnoten
+\newgeometry{left=5cm, right=1cm, top=2cm, bottom=4cm, footnotesep=1.5cm} % Abstand Text - Fußnoten
 Hier ist ein Satz mit einer Fußnote\footnote{Dies ist die erste Fußnote.}.
 \blindtext[5]
 %
 \restoregeometry
 \blindtext[3]
+%
+\section{Hausaufgabe 8.2}
+%
+\includepdf[landscape=true, nup=2x1, pages={2, 1}]{latex_ueb_08.pdf}
+%
 \end{document}
