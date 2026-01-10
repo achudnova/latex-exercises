@@ -30,7 +30,7 @@
 
 %Inhaltsvereichnis
 \begin{frame}
-\frametitle{Giederung}
+\frametitle{Gliederung}
 \tableofcontents
 \end{frame}
 
@@ -54,11 +54,13 @@
 \begin{frame}
 \frametitle{Eigenschaften - Teil 2}
 Hier ist die zweite Folie für diesen Abschnitt.
+%
 \begin{enumerate}
     \item<1-> erster Stichpunkt
     \item<2-> ein weiterer Stichpunkt
     \item<3-> noch ein Punkt
 \end{enumerate}
+%
 \end{frame}
 
 \section{Beispiel-Block}
@@ -77,35 +79,40 @@ Hier ist die zweite Folie für diesen Abschnitt.
 \section{Bilder und Tabellen}
 \begin{frame}
 \frametitle{Zwei Bilder nebeneinander}
+%
 \begin{columns}[c] % c = vertikal zentriert
 \column{.5\textwidth} % linke Spalte
 \centering
 \includegraphics[width=0.8\textwidth]{bild1.jpg}
-
+%
 \column{.5\textwidth} % rechte Spalte
 \centering
-\includegraphics[width=0.8\textwidth]{bild2.jpg}
+\includegraphics[width=0.7\textwidth]{bild2.jpg}
 \end{columns}
+%
 \end{frame}
 
 \subsection{Bild und Text}
 \begin{frame}
 \frametitle{Bild und Text}
+%
 \begin{columns}[c]
 \column{.5\textwidth} % linke Spalte
 \centering
 \includegraphics[width=0.8\textwidth]{bild3.png}
-
+%
 \column{.5\textwidth} % rechte Spalte
 Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. 
 Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, 
 mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. 
 \end{columns}
+%
 \end{frame}
 
 \subsection{Tabelle}
 \begin{frame}
 \frametitle{Tabelle}
+%
 \begin{table}[h]
     \centering
     \label{tab:daten}
@@ -117,18 +124,21 @@ mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Ku
     \end{tabular}
     \caption{Kleine Datenbank}
 \end{table}
+%
 \end{frame}
 
 \section{Mathe}
 \begin{frame}
 \frametitle{Mathematische Formel}
+%
 \begin{theorem}[Satz des Pythagoras]
     Die Summe der quadrierten Katheten ist gleich dem Quadrat der Hypothenuse.
 \end{theorem} \pause
 
 Hier ist eine \textbf{abgesetzte Formel}:
-$a^2+b^2=c^2$
+\[
+    a^2+b^2=c^2
+\]
 \end{frame}
-
 %
 \end{document}
