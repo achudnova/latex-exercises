@@ -76,8 +76,37 @@ Etwas Text
 \end{columns}
 \end{frame}
 
+\section{Statistik}
 \begin{frame}
-\frametitle{title}
+\frametitle{Tabellen}
+%
+\begin{table}[h]
+    \centering
+    \label{tab:daten}
+    \begin{tabular}{c|c|c}
+        Name & Beruf & Alter \\
+        \hline
+        Max Mustermann & Physiker & 23 \\
+        Erika Mustermann & Grundschullehrerin & 40 
+    \end{tabular}
+    \caption{Kleine Datenbank}
+\end{table}
+\end{frame}
+
+\subsection{Mathe}
+\begin{frame}
+\frametitle{Theorem}
+\begin{theorem}[Satz des Pythagoras]
+$a^2+b^2=c^2$
+\end{theorem}
+\end{frame}
+
+\subsection{Optik}
+\begin{frame}
+\frametitle{Bild}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{bild1.jpg}
+\end{figure}
 \end{frame}
 
 \end{document}
