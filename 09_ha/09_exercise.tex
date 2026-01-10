@@ -1,0 +1,64 @@
+\documentclass{beamer}
+
+% Style
+\mode<presentation>{
+    \usetheme{Berkeley}
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx} % Bilder
+\usepackage{booktabs} % Tabellen
+\usepackage{blindtext}
+
+% Einstellungen für die Präsentation
+\title[test]{Erste Präsentation}
+\author{Alina Chudnova}
+\institute[TUB]{Technische Universität Berlin}
+\date{\today}
+
+\begin{document}
+
+% Titelseite, 1 frame = 1 slide
+\begin{frame}
+\titlepage
+\end{frame}
+
+%Inhaltsvereichnis
+\begin{frame}
+\frametitle{Inhalt}
+\tableofcontents
+\end{frame}
+
+\section{Grundlagen}
+\subsection{Merkmale}
+
+\begin{frame}
+\frametitle{Merkmale}
+\blindtext
+\end{frame}
+
+\begin{frame}
+\frametitle{Merkmale als Stichpunkte}
+\begin{itemize}
+    \item erster Punkt \pause
+    \item zweiter Punkt
+\end{itemize}
+\end{frame}
+
+\subsection{Äußeres}
+
+\begin{frame}
+\frametitle{Äußeres in Textblöcken}
+\begin{block}{XY}
+Text Text Text
+\end{block}
+
+\begin{block}{Test}
+Text Text Text
+\end{block}
+
+\end{frame}
+
+\end{document}
