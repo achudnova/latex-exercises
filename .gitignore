@@ -17,3 +17,5 @@ literaturverwaltung/
 *.run.xml*
 latex_ueb_08.pdf
 *.out*
+*.jpg
+*.png
