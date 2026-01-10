@@ -3,6 +3,7 @@
 % Style
 \mode<presentation>{
     \usetheme{Boadilla}
+    \usecolortheme{beaver}
 }
 
 \usepackage[utf8]{inputenc}
@@ -58,7 +59,25 @@ Text Text Text
 \begin{block}{Test}
 Text Text Text
 \end{block}
+\end{frame}
 
+\begin{frame}
+\frametitle{Mehrere Spalten}
+\begin{columns}[c] % c = vertikal zentriert
+\column{.4\textwidth} % linke Spalte
+\textbf{Eigenschaften}
+\begin{enumerate}
+    \item Punkt
+    \item wichtiger Punkt
+\end{enumerate}
+
+\column{.5\textwidth} % rechte Spalte
+Etwas Text
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{title}
 \end{frame}
 
 \end{document}
