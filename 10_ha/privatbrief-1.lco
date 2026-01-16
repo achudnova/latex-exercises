@@ -1,3 +1,4 @@
+% Letter Option File
 \ProvidesFile{privatbrief-1.lco}[2021/15/02 letter class option]
 
 % Absenderdaten:
@@ -6,7 +7,6 @@
 \setkomavar{place}{Berlin}  % Ort beim Datum
 \setkomavar{fromphone}{+49\,(0)\,1573\,1234567}
 \setkomavar{fromemail}{max.mustermannn@gmail.com}
-%\setkomavar{fromfax}{+49\,(0)\,555\,12345}
 \setkomavar{fromurl}{\url{htttp://www.meine-seite.info}}
 
 % Optionen, welche (zusätzlichen) Absenderdaten
@@ -14,7 +14,6 @@
 % erscheinen sollen:
 \KOMAoptions{
         fromphone=true,  % Tel. Nr.  im Briefkopf anzeigen
-        fromfax=false,   % Fax-Nummer im Briefkopf anzeigen
         fromemail=true,  % E-Mail-Adresse im Briefkopf anzeigen
         fromurl=true,   % Webseite im Briefkopf anzeigen
         backaddress      % Absender soll im Brieffenster erscheinen
@@ -36,19 +35,12 @@
 }
 
 % LaTeX-Pakete für den Brief
-% In einer lco-Datei werden Pakete mit
-% RequirePackage anstatt mit usepackage
-% eingebunden.
-\RequirePackage[ngerman]{babel}                % Deutsche Sprache
+% In einer lco-Datei werden Pakete mit RequirePackage anstatt mit usepackage eingebunden.
+\RequirePackage[ngerman]{babel}         % Deutsche Sprache
 \RequirePackage{lmodern}                % Schönere Schriftart für Briefe
 \RequirePackage[T1]{fontenc}            % Ligaturschriften (korrekte Umlaute
                                         % im Ausgabedokument)
 \RequirePackage[utf8]{inputenc}         % Eingabezeichensatz
-\RequirePackage{graphicx}               % Zum Einbinden von Grafiken
-\RequirePackage{eurosym}                % Unterstützung für das Euro Symbol
-% Das Unicode-Zeichen € als \euro interpretieren.
-% So kann man direkt € tippen anstatt jedes Mal \euro auszuschreiben.
-\DeclareUnicodeCharacter{20AC}{\euro}
 
 \RequirePackage{hyperref}               % für Links im Ausgabe PDF-Dokument
                                         % (digital versendete Briefe)
