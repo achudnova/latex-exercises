@@ -1,9 +1,9 @@
 \ProvidesFile{privatbrief-1.lco}[2021/15/02 letter class option]
 
 % Absenderdaten:
-\setkomavar{fromname}{Max Mustermann}
-\setkomavar{fromaddress}{Dingsbumsstr.~1\\D-12345~Musterhausen}
-\setkomavar{place}{Musterhausen}  % Ort beim Datum
+\setkomavar{fromname}{Alina Chudnova}
+\setkomavar{fromaddress}{Dingsbumsstr.~1\\D-12345~Berlin}
+\setkomavar{place}{Berlin}  % Ort beim Datum
 \setkomavar{fromphone}{+49\,(0)\,1573\,1234567}
 \setkomavar{fromemail}{max.mustermannn@gmail.com}
 %\setkomavar{fromfax}{+49\,(0)\,555\,12345}
